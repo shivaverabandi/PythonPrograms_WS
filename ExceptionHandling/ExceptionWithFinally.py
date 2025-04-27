@@ -1,6 +1,7 @@
 
 try:
-    manideep = open("C:\\Users\\V.SHIVA\\PythonPrograms_WS\\ExceptionHandling\\text.txt",'r')
+    # Define the path of the file in the Your system.
+    manideep = open("C:\\Users\\V.SHIVA\\PythonPrograms_WS\\ExceptionHandling\\text.txt",'r') 
     content = manideep.read()
     print(type (manideep))
     print(content)
@@ -13,13 +14,14 @@ except FileNotFoundError:
 
 except BaseException:
     print("base class")
-    
+
 except Exception:
     print("general error")
 else :
     print("try block run successfully")
 
 finally:
+    manideep.close()
     print("I will excute even after try block or catch no matter i will execute")
 
 # Parent extends Child{}
